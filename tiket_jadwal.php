@@ -4,9 +4,9 @@
 	<title>Jadwal</title>
 </head>
 <body>
-<a href="tiket_jadwal.php">Jadwal</a>
-<a href="tiket_pesan.php">Pesan</a>
-<a href="tiket_bayarcari.php">Bayar</a>
+<a href="tiket_jadwal.php"><button>Jadwal</button></a>
+<a href="tiket_pesan.php"><button>Pesan</button></a>
+<a href="tiket_bayarcari.php"><button>Bayar</button></a>
 <hr>
 <?php
 include "konekdatabase.php";
