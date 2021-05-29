@@ -4,20 +4,28 @@
 	<title>Cari</title>
 </head>
 <body>
-<a href="tiket_jadwal.php">Jadwal</a>
-<a href="tiket_pesan.php">Pesan</a>
-<a href="tiket_bayarcari.php">Bayar</a>
+<a href="tiket_jadwal.php"><button>Jadwal</button></a>
+<a href="tiket_pesan.php"><button>Pesan</button></a>
+<a href="tiket_bayarcari.php"><button>Bayar</button></a>
 <hr>
+<table>
 <form action="tiket_bayar.php" method="GET">
-	<label>Masukkan Kode Pemesanan:</label>
-	<input type="text" name="kode">
-	<input type="submit" value="Cari">
+	<tr>
+		<td>Masukkan Kode Pemesanan</td>
+		<td><input type="text" name="kode"></td>
+		<td><input type="submit" value="Cari"></td>
+	</tr>
 </form>
-<p>Atau</p>
+	<tr>
+		<td><b>Atau</b></td>
+	</tr>
 <form action="tiket_carinama.php" method="GET">
-	<label>Cari Nama:</label>
-	<input type="text" name="nama_c">
-	<input type="submit" value="Cari">
+	<tr>
+		<td>Cari Nama</td>
+		<td><input type="text" name="nama_c"></td>
+		<td><input type="submit" value="Cari"></td>
+	</tr>
 </form>
+</table>
 </body>
 </html>
