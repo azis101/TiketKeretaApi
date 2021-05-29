@@ -43,9 +43,11 @@ if (empty($kode_psn) or empty($rekening) or empty($nama_b) or empty($tgl_byr) or
 		$runsqlheader = $conn->query($sqlheader);
 		echo "Kode Pembayaran: ".$kode_byr."<br>";
 		echo "Pembayaran Lunas"."<br>";
-		echo "Kembalian: ".$kembalian;
+		echo "Kembalian: ".$kembalian."<br>";
 	}
 }
 ?>
+<p>SILAHKAN CETAK TIKET DISINI</p>
+<!-- <a href="">CETAK</a> -->
 </body>
 </html>
