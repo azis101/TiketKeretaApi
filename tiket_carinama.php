@@ -4,6 +4,10 @@
 	<title>Cari Nama</title>
 </head>
 <body>
+<a href="tiket_jadwal.php"><button>Jadwal</button></a>
+<a href="tiket_pesan.php"><button>Pesan</button></a>
+<a href="tiket_bayarcari.php"><button>Bayar</button></a>
+<hr>
 <?php
 include "konekdatabase.php";
 if(isset($_GET['nama_c'])){
