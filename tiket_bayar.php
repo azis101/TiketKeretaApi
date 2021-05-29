@@ -4,6 +4,10 @@
 	<title>Bayar Tiket</title>
 </head>
 <body>
+<a href="tiket_jadwal.php"><button>Jadwal</button></a>
+<a href="tiket_pesan.php"><button>Pesan</button></a>
+<a href="tiket_bayarcari.php"><button>Bayar</button></a>
+<hr>
 <?php 
 include "konekdatabase.php"; 
 if(isset($_GET['kode'])){
@@ -12,34 +16,73 @@ if(isset($_GET['kode'])){
 	$hasilkode = $sqlkode->fetch_assoc();
 	$sqlcektg = $conn->query("SELECT * FROM pembayaran WHERE kode_pemesanan='$carikode'");
 	$hasilcektg = $sqlcektg->fetch_assoc();
-	echo "Kode Pemesanan: ".$hasilkode["kode_pemesanan"]."<br>";
-	echo "Tanggal Pemesanan: ".$hasilkode["tgl_pemesanan"]."<br>";
-	echo "Nama Pemesan: ".$hasilkode["nama_customer"]."<br>";
-	echo "Tanggal Keberangkatan: ".$hasilkode["tgl_berangkat"]."<br>";
-	echo "Kode Jadwal: ".$hasilkode["kode_jadwal"]."<br>";
-	echo "Tarif Per Tiket: ".$hasilkode["tarif_tiket"]."<br>";
-	echo "Jumlah Tiket: ".$hasilkode["jumlah_pemesanan"]."<br>";
-	echo "Tarif Total: ".$hasilkode["tarif_total"]."<br>";
-	if (empty($hasilcektg)) {
-		$tagihan = $hasilkode["tarif_total"];
-		echo "Tagihan: ".$tagihan;
-	} else {
-		$tagihan = $hasilcektg['tagihan'];
-		echo "Tagihan: ".$tagihan;
-	}
-}
 ?>
+<table>
+	<tr>
+		<td>Kode Pemesanan</td>
+		<td><?php echo $hasilkode["kode_pemesanan"]; ?></td>
+	</tr>
+	<tr>
+		<td>Tanggal Pemesanan</td>
+		<td><?php echo $hasilkode["tgl_pemesanan"]; ?></td>
+	</tr>
+	<tr>
+		<td>Nama Pemesan</td>
+		<td><?php echo $hasilkode["nama_customer"]; ?></td>
+	</tr>
+	<tr>
+		<td>Tanggal Keberangkatan</td>
+		<td><?php echo $hasilkode["tgl_berangkat"]; ?></td>
+	</tr>
+	<tr>
+		<td>Kode Jadwal</td>
+		<td><?php echo $hasilkode["kode_jadwal"]; ?></td>
+	</tr>
+	<tr>
+		<td>Tarif Per Tiket</td>
+		<td><?php echo $hasilkode["tarif_tiket"]; ?></td>
+	</tr>
+	<tr>
+		<td>Jumlah Tiket</td>
+		<td><?php echo $hasilkode["jumlah_pemesanan"]; ?></td>
+	</tr>
+	<tr>
+		<td>Tarif Total</td>
+		<td><?php echo $hasilkode["tarif_total"]; ?></td>
+	</tr>
+	<?php
+		if (empty($hasilcektg)) {
+			$tagihan = $hasilkode["tarif_total"];
+		} else {
+			$tagihan = $hasilcektg['tagihan'];
+		}
+	}?>
+	<tr>
+		<td>Tagihan</td>
+		<td><?php echo $tagihan; ?></td>
+	</tr>
+</table>
 <hr>
 <form action="tiket_bayaraksi.php" method="POST">
 	<input type="hidden" name="kode_psn" value="<?php echo $hasilkode['kode_pemesanan']; ?>">
-	<label>Nomor Rekening: </label>
-	<input type="number" name="rekening"><br>
-	<label>Nama: </label>
-	<input type="text" name="nama_b"><br>
-	<label>Tanggal Pembayaran: </label>
-	<input type="date" name="tgl_byr" value="<?php echo date("Y-m-d"); ?>"><br>
-	<label>Nominal: </label>
-	<input type="number" name="nominal"><br>
+	<table>
+		<tr>
+			<td>Nomor Rekening</td>
+			<td><input type="number" name="rekening"></td>
+		</tr>
+		<tr>
+			<td>Nama</td>
+			<td><input type="text" name="nama_b"></td>
+		</tr>
+		<tr>
+			<td>Tanggal Pembayaran</td>
+			<td><input type="date" name="tgl_byr" value="<?php echo date("Y-m-d"); ?>"></td>
+		</tr>
+		<tr>
+			<td>Nominal</td>
+			<td><input type="number" name="nominal"></td>
+		</tr>
+	</table>
 	<input type="submit" value="Submit">
 </form>
 </body>
