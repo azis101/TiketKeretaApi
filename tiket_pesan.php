@@ -18,7 +18,7 @@
 		<tr>
 			<td>Kode Pemesan</td>
 			<td>:</td>
-			<td><input type="text" name="kode_psn" class="input" value="<?= rand(0, 999)?>"></input></td>
+			<td><input type="text" name="kode_psn" class="input" value="<?php echo "PS".rand(0, 999); ?>"></input></td>
 		</tr>
 		<tr>
 			<td>Kode Jadwal</td>
@@ -56,7 +56,7 @@
 		<tr>
 			<td>Tanggal Pemesanan</td>
 			<td>:</td>
-			<td><input type="date" placeholder="Tanggal Pemesanan" name="tgl_psn" class="input"></input></td>
+			<td><input type="date" placeholder="Tanggal Pemesanan" name="tgl_psn" class="input" value="<?php echo date("Y-m-d"); ?>"></input></td>
 		</tr>
 		<tr>
 			<td>Nama Pembeli</td>
