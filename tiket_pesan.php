@@ -16,7 +16,7 @@
 <form action="tiket_pesanaksi.php" method="POST">
 	<table>
 		<tr>
-			<td>Kode Pemesan</td>
+			<td>Kode Pemesanan</td>
 			<td>:</td>
 			<td><input type="text" name="kode_psn" class="input" value="<?php echo "PS".rand(0, 999); ?>"></input></td>
 		</tr>
