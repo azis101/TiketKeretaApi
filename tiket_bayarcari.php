@@ -30,7 +30,7 @@
 		<td>Cari Nama</td>
 		<td>:</td>
 		<td><input type="text" name="nama_c" class="input" required placeholder="Cari Nama"></input></td>
-		<td><input type="submit" value="Cari"></td>
+		<td><input type="submit" value="Cari" class="submit"></td>
 	</tr>
 </form>
 </table>
