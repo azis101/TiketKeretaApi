@@ -1,0 +1,30 @@
+*{
+.title{
+	background: #0ba966;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+	padding: 4px;
+
+.submit{
+	padding: 8px 10px;
+	background: #fff;
+	color: #0ba966;
+	border: 1px solid #0ba966;
+	border-radius: 2px; 
+}
+.submit:hover{
+	background: #0ba966;
+	color: #fff;
+}
+.content{
+	margin: 3% auto;
+}
+.content a{
+	text-decoration: none;
+}
+.kotak{
+	margin: auto;
+	width: 90%;
+	border: 1px solid #eee;
+}
