@@ -72,22 +72,22 @@ if(isset($_GET['kode'])){
 	<table>
 		<tr>
 			<td>Nomor Rekening</td>
-			<td><input type="number" name="rekening"></td>
+			<td><input type="number" name="rekening" class="input"></td>
 		</tr>
 		<tr>
 			<td>Nama</td>
-			<td><input type="text" name="nama_b"></td>
+			<td><input type="text" name="nama_b" class="input"></td>
 		</tr>
 		<tr>
 			<td>Tanggal Pembayaran</td>
-			<td><input type="date" name="tgl_byr" value="<?php echo date("Y-m-d"); ?>"></td>
+			<td><input type="date" name="tgl_byr" class="input" value="<?php echo date("Y-m-d"); ?>"></td>
 		</tr>
 		<tr>
 			<td>Nominal</td>
-			<td><input type="number" name="nominal"></td>
+			<td><input type="number" name="nominal" class="input"></td>
 		</tr>
 	</table>
-	<input type="submit" value="Submit">
+	<input type="submit" value="Submit" class="submit">
 </form>
 </div>
 </center>
