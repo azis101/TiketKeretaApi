@@ -18,7 +18,7 @@ $sql = "SELECT * FROM 09_kereta NATURAL JOIN 09_jadwal";
 $result = $conn->query($sql);
 ?>
 <table  border="1" cellspacing="1" cellpadding="4">
-	<tr bgcolor=”#3cff00” >
+	<tr bgcolor="#3cff00" >
 		<th>Kode Jadwal</th>
 		<th>Nama Kereta</th>
 		<th>Jalur</th>
