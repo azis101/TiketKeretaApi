@@ -19,7 +19,7 @@
 		<td>Masukkan Kode Pemesanan</td>
 		<td>:</td>
 		<td><input type="text" name="kode" class="input" required placeholder="Kode Pemesanan"></input></td>
-		<td><input type="submit" value="Cari"></td>
+		<td><input type="submit" value="Cari" class="submit"></td>
 	</tr>
 </form>
 	<tr>
