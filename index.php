@@ -17,7 +17,7 @@
 					include 'tiket_jadwal.php';
 				else if($_GET['act'] == 'tiket_bayar')
 					include 'tiket_bayar.php';
-				
+		
 			}else if(isset($_GET['tiket_pesan'])){
 					include 'tiket_pesan.php';
 			}else {
